@@ -1,0 +1,40 @@
+{
+  "name": "restapi-nodejs",
+  "version": "1.0.0",
+  "description": "Rest api using mongodb and express js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "mocha tests/**/*Tests.js",
+    "lint": "eslint ."
+  },
+  "author": "S Trivedi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.9",
+    "nodemon": "^1.18.9",
+    "sinon-as-promised": "^4.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.3",
+    "sinon": "^7.2.3",
+    "supertest": "^3.4.2"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}
